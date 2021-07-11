@@ -70,9 +70,8 @@ namespace BabaFunkeStripeWebhook.Controllers
         {
             var toEmail = paymentIntent.ReceiptEmail;
             var ccEmail = "hello@babafunke.com";
-            var emailBody = $"Ndewo,\n\nCustomerEmail: {toEmail}\n\nOnce again, thanks for ordering our online class with Aunty Chi! " +
-                $"This form is to help us better prepare for an exciting journey with you by identifying your preferred time slot among others.See link below.\n\n" +
-                $"https://auntychiigboclass.geniigames.app/";
+            var emailBody = "Ndewo,\n\nOnce again, thanks for ordering our online class with Aunty Chi. " +
+                "This form is to help us better prepare for an exciting journey with you by identifying your preferred time slot among others. See link below *****";
 
             await _emailService.SendEmail(emailBody, toEmail, ccEmail);
         }
